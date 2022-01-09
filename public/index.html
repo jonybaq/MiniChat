@@ -130,7 +130,7 @@
 
       //referencias html
       const disconect = (ev) => {
-        ev.preventDefault();
+        //ev.preventDefault();
         socket.disconnect();
         btnEnviar.disabled = true;
         btnConectar.disabled = false;
@@ -156,7 +156,7 @@
         });
       ///emiciones
       formulario.addEventListener("submit", (ev) => {
-        //ev.preventDefault();
+        ev.preventDefault();
         socket.emit("mensaje-cliente", mensaje.value);
         mensaje.value = "";
       });
