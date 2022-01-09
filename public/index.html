@@ -156,7 +156,7 @@
         });
       ///emiciones
       formulario.addEventListener("submit", (ev) => {
-        ev.preventDefault();
+        //ev.preventDefault();
         socket.emit("mensaje-cliente", mensaje.value);
         mensaje.value = "";
       });
