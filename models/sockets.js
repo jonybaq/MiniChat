@@ -12,6 +12,7 @@ class Sockets {
                 this.io.emit('mensaje-server',socket.handshake.query.nombre+': '+datos);
             });
             socket.on("disconnect", () => {
+                console.log(`disconnect`);
                 this.io.emit('mensaje-bienvenida','Se Desconecto el usuario '+socket.handshake.query.nombre);
               });
             socket.on("mensaje-escribiendo", () => {
