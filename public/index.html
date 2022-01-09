@@ -165,7 +165,7 @@
         ev.preventDefault();
         if (nombre.value) {
           if (nombre.value.trim().length > 0) {
-            socket = io.connect("http://192.168.100.47:8080", {
+            socket = io.connect("https://app-minichatnode.herokuapp.com", {
               query: "nombre=" + nombre.value,
               extra: "extra",
             });
